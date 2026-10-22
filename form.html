@@ -1,0 +1,196 @@
+<html>
+<head>
+
+    <title>Student Registration Form</title>
+
+    <script>
+
+        function showPage(page) {
+
+            document.getElementById("login").style.display = "none";
+
+            document.getElementById("register").style.display = "none";
+
+            document.getElementById("thankyou").style.display = "none";
+
+            document.getElementById(page).style.display = "block";
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div id="login">
+
+    <header>
+
+        <h2>Welcome to Our Website</h2>
+
+    </header>
+
+    <h3>Login</h3>
+
+    <form onsubmit="showPage('register'); return false;">
+
+        <label>Username:</label>
+        <input type="text" placeholder="Enter Username" required>
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password" required>
+
+        <br><br>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <p>
+
+        Don't have an account?
+
+        <a href="#" onclick="showPage('register')">
+
+            Register here
+
+        </a>
+
+    </p>
+
+    <footer>
+
+        <p>&copy; 2026 Student Project. All rights reserved.</p>
+
+    </footer>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div id="register" style="display:none;">
+
+    <header>
+
+        <h2>Registration Page</h2>
+
+    </header>
+
+    <h3>Create Account</h3>
+
+    <form onsubmit="showPage('thankyou'); return false;">
+
+        <label>Username:</label>
+        <input type="text" placeholder="Enter Username" required>
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password" required>
+
+        <br><br>
+
+        <label>Confirm Password:</label>
+        <input type="password" placeholder="Confirm Password" required>
+
+        <br><br>
+
+        <label>Gender:</label>
+
+        <input type="radio" name="gender" value="male" required>
+        Male
+
+        <input type="radio" name="gender" value="female">
+        Female
+
+        <br><br>
+
+        <label>Country:</label>
+
+        <select required>
+
+            <option value="">--Select Country--</option>
+
+            <option value="Pakistan">Pakistan</option>
+
+            <option value="India">India</option>
+
+            <option value="USA">USA</option>
+
+            <option value="UK">UK</option>
+
+            <option value="Canada">Canada</option>
+
+        </select>
+
+        <br><br>
+
+        <label>License:</label>
+
+        <p>
+            1. You must provide correct information.
+        </p>
+
+        <p>
+            2. Your username and password must be kept private.
+        </p>
+
+        <p>
+            3. You agree to follow the rules of this website.
+        </p>
+
+        <p>
+            4. You are responsible for your account.
+        </p>
+
+        <p>
+            5. Your information should not be misused.
+        </p>
+
+        <input type="checkbox" required>
+
+        I agree to the license terms.
+
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <footer>
+
+        <p>&copy; 2026 Student Project. All rights reserved.</p>
+
+    </footer>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div id="thankyou" style="display:none;">
+
+    <header>
+
+        <h2>Registration Complete</h2>
+
+    </header>
+
+    <h1>Thank You!</h1>
+
+    <footer>
+
+        <p>&copy; 2026 Student Project. All rights reserved.</p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
